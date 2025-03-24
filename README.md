@@ -33,3 +33,38 @@ This laboratory implements a genetic algorithm to solve the Knapsack Problem, a 
 ### Visualization
 
 The algorithm tracks and visualizes how the fitness of the population evolves. The red line represents the best solution in each generation, while scattered points represent different solutions across generations.
+
+
+## Lab 3: Minimax Algorithm in connect4
+### Overview
+This project implements the Minimax algorithm with heuristic evaluation to make strategic decisions in the game Connect4. The agent simulates future game states to maximize its chances of winning while minimizing the opponent's advantage. This technique is commonly used in AI-driven game playing and is a fundamental concept in reinforcement learning and decision-making algorithms.
+
+### Implementation Details
+**MinimaxAgent** (Basic Minimax without Alpha-Beta Pruning)
+- Uses a recursive minimax function to evaluate possible moves.
+
+- Heuristic evaluation considers factors such as:
+
+   - Number of tokens in a row.
+
+   - Control of the center column.
+
+   - Potential winning moves.
+
+- Implements a normalized scoring system to adjust the evaluation range between -1 and 1.
+
+**AlphaBetaAgent** (Optimized with Alpha-Beta Pruning)
+- Extends the Minimax algorithm with Alpha-Beta pruning, significantly reducing computational complexity.
+
+- Cuts off branches in the search tree that cannot affect the final decision, making it more efficient than standard Minimax.
+
+### Heuristic Evaluation
+The heuristic function assigns scores to different board states:
+
+- Winning move: +1 (for the AI) or -1 (for the opponent).
+
+- Three in a row with an open space: +100 (high priority for completion).
+
+- Blocking the opponent's three in a row: -100 (defensive move).
+
+- Control of the center column: Higher weight since it provides more connectivity opportunities.
