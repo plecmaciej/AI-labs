@@ -68,3 +68,32 @@ The heuristic function assigns scores to different board states:
 - Blocking the opponent's three in a row: -100 (defensive move).
 
 - Control of the center column: Higher weight since it provides more connectivity opportunities.
+
+## Lab 4: Classification
+
+### Description
+Implementation of a decision tree classifier and random forest ensemble for solving classification problems. The project demonstrates fundamental machine learning concepts including:
+- Decision tree construction using Gini impurity
+- Random forest with bootstrap aggregating (bagging)
+- Feature subset selection for ensemble diversity
+
+### Key Components
+
+#### Decision Tree Implementation (`Node` class)
+Core tree-building functionality:
+- `gini_best_score()`: Calculates optimal data splits using Gini impurity
+- `find_best_split()`: Identifies the best feature and value for node splitting
+- `train()`: Recursively builds the decision tree with configurable depth
+- `predict()`: Classifies samples by traversing the tree
+
+#### Random Forest Implementation
+Ensemble learning features:
+- Bagging with replacement (bootstrap sampling)
+- Parallel tree training with feature subset selection
+- Majority voting for classification
+- Accuracy evaluation method
+
+## Hyperparameters
+- `depth`: Maximum tree depth (controls overfitting)
+- `ntrees`: Number of trees in the forest
+- `feature_subset`: Features considered at each split (√n_features by default)
