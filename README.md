@@ -97,3 +97,17 @@ Ensemble learning features:
 - `depth`: Maximum tree depth (controls overfitting)
 - `ntrees`: Number of trees in the forest
 - `feature_subset`: Features considered at each split (√n_features by default)
+
+## Lab 5: K-Means Clustering  
+
+### Overview   
+
+This projectfocus on clustering techniques using the K-Means algorithm. The implementation includes different centroid initialization strategies and evaluates clustering performance on the Iris dataset.
+
+### Implementation Details
+
+The project implements K-Means clustering with two initialization methods:   
+
+- Forgy Initialization - Randomly selects k points from the dataset as initial centroids.   
+  
+- K-Means++ Initialization - Selects the first centroid randomly, then picks subsequent centroids based on the maximum distance from already chosen centroids to improve clustering performance.   
