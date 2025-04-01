@@ -111,3 +111,34 @@ The project implements K-Means clustering with two initialization methods:
 - Forgy Initialization - Randomly selects k points from the dataset as initial centroids.   
   
 - K-Means++ Initialization - Selects the first centroid randomly, then picks subsequent centroids based on the maximum distance from already chosen centroids to improve clustering performance.   
+
+## Lab 6: Neural Networks for Classification
+
+This labs contains implementations of neural networks for classification tasks using both NumPy and PyTorch. The project includes examples of simple perceptrons, two-layer neural networks, and deep multi-layer networks trained with gradient descent.
+
+### Features
+
+- **Single Neuron Classifier**: Implements a basic perceptron using NumPy, utilizing activation functions such as ReLU, Sigmoid, and Hardlim. The neuron is trained on linearly separable data.
+- **Two-Layer Neural Network**: Builds a neural network with one hidden layer to classify non-linearly separable data. The network consists of a hidden layer using Hardlim activation and an output layer making binary predictions.
+- **Multi-Layer Neural Network (PyTorch)**: Uses deep learning with PyTorch to classify spiral-shaped data. The model consists of multiple hidden layers with ReLU activation and an output layer with a Sigmoid activation for binary classification.
+- **Visualization Utilities**: Tools to inspect and visualize datasets and decision boundaries. These include plotting decision boundaries, activation functions, and loss curves.
+
+### Implementation Details
+
+#### Single Neuron Model (NumPy)
+
+- The model initializes weights randomly and applies an activation function to classify data.
+- The function `zad1_single_neuron(student_id)` loads a linearly separable dataset and fits a single neuron model.
+- The decision boundary is visualized to evaluate performance.
+
+#### Two-Layer Neural Network (NumPy)
+
+- The `DenseLayer` class represents a single layer of neurons.
+- The `SimpleTwoLayerNetwork` class stacks two `DenseLayer`s to create a simple MLP.
+- The model is tested on non-linearly separable data and visualized using decision boundaries.
+
+#### Multi-Layer Neural Network (PyTorch)
+
+- The `TorchMultiLayerNetwork` class constructs a deep neural network using `torch.nn.Module`.
+- The model is trained using stochastic gradient descent and binary cross-entropy loss.
+- The `training()` function optimizes weights, while `evaluate_model()` assesses accuracy.
