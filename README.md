@@ -36,7 +36,7 @@ The algorithm tracks and visualizes how the fitness of the population evolves. T
 
 
 ## Lab 3: Minimax Algorithm in connect4
-### Overview
+### Description
 This project implements the Minimax algorithm with heuristic evaluation to make strategic decisions in the game Connect4. The agent simulates future game states to maximize its chances of winning while minimizing the opponent's advantage. This technique is commonly used in AI-driven game playing and is a fundamental concept in reinforcement learning and decision-making algorithms.
 
 ### Implementation Details
@@ -100,7 +100,7 @@ Ensemble learning features:
 
 ## Lab 5: K-Means Clustering  
 
-### Overview   
+### Description   
 
 This projectfocus on clustering techniques using the K-Means algorithm. The implementation includes different centroid initialization strategies and evaluates clustering performance on the Iris dataset.
 
