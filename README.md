@@ -142,3 +142,33 @@ This labs contains implementations of neural networks for classification tasks u
 - The `TorchMultiLayerNetwork` class constructs a deep neural network using `torch.nn.Module`.
 - The model is trained using stochastic gradient descent and binary cross-entropy loss.
 - The `training()` function optimizes weights, while `evaluate_model()` assesses accuracy.
+
+## Lab 7: Reinforcement Learning – FrozenLake Lab
+This lab focuses on Reinforcement Learning (RL) using the classic FrozenLake environment, where an agent learns to navigate a frozen grid world and reach a goal while avoiding holes.
+
+### Goal
+The main objective of the lab is to implement and experiment with Q-learning, a value-based reinforcement learning algorithm. The agent learns optimal actions through trial-and-error interactions with the environment.
+
+### How It Works
+The environment (FrozenLake) is a custom grid-based world.
+
+The agent can be:   
+
+- ManualPygameAgent – controlled manually via keyboard (for testing)  
+
+- QAgent – autonomous agent using Q-learning   
+
+The agent interacts with the environment through episodes of exploration and learning.
+
+### Q-Learning Agent Highlights
+Uses a Q-table to store state-action values, supports ε-greedy policy for balancing exploration and exploitation, learns via the Bellman equation. Parameters include: learning rate (α), discount factor (γ), epsilon (ε) with decay for exploration
+
+### GUI
+A simple PyGame interface is provided for both training and testing modes:
+- Visualize agent learning over episodes   
+- Manually control agent for debugging or comparison  
+
+You can switch between:
+
+- train – agent learns from scratch and saves the model
+- test – loads a pre-trained model and runs it with epsilon = 0.0
